@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English - Klassen</title>
+<style>
+body { background: #801638; }
+
+body, body > * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+* { transition: all .3s ease 0s; }
+
+/* Background colours */
+
+div + div article:nth-child(1) { background: #c22326; }
+
+div + div article:nth-child(2) { background: #f37338; }
+
+div + div article:nth-child(3) { background: #fdb632; }
+
+div + div article:nth-child(4) { background: #027878; }
+
+div + div article:nth-child(5) { background: green; }
+
+div + div article:nth-child(6), div + div { background: #801638; }
+
+/* Main layout */
+
+html, body, div + div {
+  width: 100vw;
+  height: 100vh;
+}
+
+div + div {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* Articles */
+
+div + div article {
+  flex: initial;
+  width: 16.7%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  vertical-align: bottom;
+  box-sizing: border-box;
+  padding: 2vh 1vw;
+  position: relative;
+}
+
+/* Big Headings */
+
+body > div:first-child {
+  position: fixed;
+  bottom: 10vh;
+  background: #fff;
+  width: 100%;
+  text-align: center;  
+  font-size: 2vh;
+ padding: .5rem;
+  z-index: 2;
+}
+
+body > div:first-child h1, body > div:first-child h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover interaction */
+
+div + div:hover article {
+  flex: initial;
+  width: 10%;
+}
+
+div + div article:hover { width: 60%; }
+
+article > div {
+  opacity: 0;
+  transition: opacity .2s ease 0;
+}
+
+div + div article:hover > div {
+  opacity: 1;
+  transition: opacity .3s ease .3s;
+}
+
+/* navigation */
+
+div + div article > h2 {
+  /*background: rgba(0,0,0,0.50);/**/
+  /*padding: 0px;/**/
+  bottom: 2vh;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  font-size: 2vh;
+}
+
+/* Article layouts */
+
+article div {
+  text-align: left;
+  margin-left: 20px;
+  width: 58vw;
+}
+
+article div > h3 {
+background-color: rgba(0,0,0,0.50);
+height: 30px;
+padding-top: 10px;
+padding-left: 5px;
+}
+
+article div p, article div div h2, article div h3 { margin: 0 0 1em 0; }
+
+h1, h2, h3, h4, h5, h6 { text-transform: uppercase; }
+
+article div p { width: 40vw; }
+@media (max-width: 900px) {
+
+div + div article { padding: 2vh 3vw; }
+
+div + div article > h2 {
+  transform: rotate(90deg);
+  bottom: 23vh;
+  min-width: 12em;
+  text-align: left;
+  font-size: 3vh;
+  transform: rotate(-90deg);
+  transform-origin: 0 0 0;
+  opacity: 1;
+}
+
+div + div article:hover > h2 { opacity: 0; }
+
+article div p { width: 50vw; }
+
+article div {
+  max-height: calc(72%);
+  overflow-y: auto;
+}
+}
+</style>
+</head>
+
+<body>
+<!-- Built by Rachel Reveley http://rachelreveley.co.uk -->
+<div>
+  <h1>English</h1>
+  <h2>Online Learning Platform</h2>
+</div>
+<div>
+  <article>
+    <h2>Economie</h2>
+    <div>
+      <h3>Year 1</h3>
+      <p>General Information</p>
+      <p>Reading Assignments</p>
+      <p>Writing Assignments</p>
+      <p>Listening Assignments</p>
+      <p>Speaking</p>
+      <p>Conversing</p>
+      <p>Grammar</p>
+      <p>Vocabulary</p>
+      <p>Spelling</p>
+
+      <h3>Year 2</h3>
+      <p>General Information</p>
+      <p>Reading Assignments</p>
+      <p>Writing Assignments</p>
+      <p>Listening Assignments</p>
+      <p>Speaking</p>
+      <p>Conversing</p>
+      <p>Grammar</p>
+      <p>Vocabulary</p>
+      <p>Spelling</p>
+
+      <h3>Year 3</h3>
+      <p>General Information</p>
+      <p>Reading Assignments</p>
+      <p>Writing Assignments</p>
+      <p>Listening Assignments</p>
+      <p>Speaking</p>
+      <p>Conversing</p>
+      <p>Grammar</p>
+      <p>Vocabulary</p>
+      <p>Spelling</p>
+      </div>
+  </article>
+  <article>
+    <h2>Gezond & Welzijn</h2>
+    <div>
+      <h3>Gezond & Welzijn</h3>
+      <p>Th'art nesh thee nay lad soft lad wacken thi sen up t'foot o' our stairs. Nay lad where's tha bin. Th'art nesh thee a pint ‘o mild any rooad t'foot o' our stairs. Where there's muck there's brass t'foot o' our stairs ah'll gi' thee a thick ear. Ah'll learn thi tintintin tell thi summat for nowt soft lad mardy bum. Chuffin'</p>
+      <p>nora ah'll box thi ears soft lad ee by gum tell thi summat for nowt ah'll gi' thee a thick ear. Bobbar nay lad. Breadcake soft southern pansy wacken thi sen up. Be reet where's tha bin mardy bum mardy bum. Tell thi summat for nowt where there's muck there's brass shu' thi gob. Dahn t'coil oil. That's champion ey up will ‘e ‘eckerslike shurrup by ‘eck. Eeh. Shu' thi gob face like a slapped arse god's own county soft lad th'art nesh thee tha daft apeth.</p>
+    </div>
+  </article>
+  <article>
+    <h2>Onderwijs & Opvoeding</h2>
+    <div>
+      <h3>Onderwijs & Opvoeding</h3>
+      <p>Th'art nesh thee nay lad soft lad wacken thi sen up t'foot o' our stairs. Nay lad where's tha bin. Th'art nesh thee a pint ‘o mild any rooad t'foot o' our stairs. Where there's muck there's brass t'foot o' our stairs ah'll gi' thee a thick ear. Ah'll learn thi tintintin tell thi summat for nowt soft lad mardy bum. Chuffin'</p>
+      <p>nora ah'll box thi ears soft lad ee by gum tell thi summat for nowt ah'll gi' thee a thick ear. Bobbar nay lad. Breadcake soft southern pansy wacken thi sen up. Be reet where's tha bin mardy bum mardy bum. Tell thi summat for nowt where there's muck there's brass shu' thi gob. Dahn t'coil oil. That's champion ey up will ‘e ‘eckerslike shurrup by ‘eck. Eeh. Shu' thi gob face like a slapped arse god's own county soft lad th'art nesh thee tha daft apeth.</p>
+    </div>
+  </article>
+  <article>
+    <h2>ICT</h2>
+    <div>
+      <h3>ICT</h3>
+      <p>Th'art nesh thee nay lad soft lad wacken thi sen up t'foot o' our stairs. Nay lad where's tha bin. Th'art nesh thee a pint ‘o mild any rooad t'foot o' our stairs. Where there's muck there's brass t'foot o' our stairs ah'll gi' thee a thick ear. Ah'll learn thi tintintin tell thi summat for nowt soft lad mardy bum. Chuffin'</p>
+      <p>nora ah'll box thi ears soft lad ee by gum tell thi summat for nowt ah'll gi' thee a thick ear. Bobbar nay lad. Breadcake soft southern pansy wacken thi sen up. Be reet where's tha bin mardy bum mardy bum. Tell thi summat for nowt where there's muck there's brass shu' thi gob. Dahn t'coil oil. That's champion ey up will ‘e ‘eckerslike shurrup by ‘eck. Eeh. Shu' thi gob face like a slapped arse god's own county soft lad th'art nesh thee tha daft apeth.</p>
+    </div>
+  </article>
+  <article>
+    <h2>Groen & Dier</h2>
+    <div>
+      <h3>Groen & Dier</h3>
+      <p>Th'art nesh thee nay lad soft lad wacken thi sen up t'foot o' our stairs. Nay lad where's tha bin. Th'art nesh thee a pint ‘o mild any rooad t'foot o' our stairs. Where there's muck there's brass t'foot o' our stairs ah'll gi' thee a thick ear. Ah'll learn thi tintintin tell thi summat for nowt soft lad mardy bum. Chuffin'</p>
+      <p>nora ah'll box thi ears soft lad ee by gum tell thi summat for nowt ah'll gi' thee a thick ear. Bobbar nay lad. Breadcake soft southern pansy wacken thi sen up. Be reet where's tha bin mardy bum mardy bum. Tell thi summat for nowt where there's muck there's brass shu' thi gob. Dahn t'coil oil. That's champion ey up will ‘e ‘eckerslike shurrup by ‘eck. Eeh. Shu' thi gob face like a slapped arse god's own county soft lad th'art nesh thee tha daft apeth.</p>
+    </div>
+  </article>
+  <article>
+      <h2>Niveau 3 studenten</h2>
+      <div>
+        <h3>Niveau 3 studenten</h3>
+        <p>Th'art nesh thee nay lad soft lad wacken thi sen up t'foot o' our stairs. Nay lad where's tha bin. Th'art nesh thee a pint ‘o mild any rooad t'foot o' our stairs. Where there's muck there's brass t'foot o' our stairs ah'll gi' thee a thick ear. Ah'll learn thi tintintin tell thi summat for nowt soft lad mardy bum. Chuffin'</p>
+        <p>nora ah'll box thi ears soft lad ee by gum tell thi summat for nowt ah'll gi' thee a thick ear. Bobbar nay lad. Breadcake soft southern pansy wacken thi sen up. Be reet where's tha bin mardy bum mardy bum. Tell thi summat for nowt where there's muck there's brass shu' thi gob. Dahn t'coil oil. That's champion ey up will ‘e ‘eckerslike shurrup by ‘eck. Eeh. Shu' thi gob face like a slapped arse god's own county soft lad th'art nesh thee tha daft apeth.</p>
+      </div>
+    </article>
+</div>
+</body><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+</html>

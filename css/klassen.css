@@ -1,0 +1,242 @@
+body { background: #801638; }
+
+body, body > * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+* { transition: all .3s ease 0s; }
+
+/* Background colours */
+
+div + div article:nth-child(1) { background: #c22326; }
+
+div + div article:nth-child(2) { background: #f37338; }
+
+div + div article:nth-child(3) { background: #fdb632; }
+
+div + div article:nth-child(4) { background: #027878; }
+
+div + div article:nth-child(5) { background: green; }
+
+div + div article:nth-child(6), div + div { background: #801638; }
+
+/* Main layout */
+
+html, body, div + div {
+  width: 100vw;
+  height: 100vh;
+}
+
+div + div {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* Articles */
+
+div + div article {
+  flex: initial;
+  width: 16.7%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  vertical-align: bottom;
+  box-sizing: border-box;
+  padding: 2vh 1vw;
+  position: relative;
+  overflow-y: scroll; /* add scroll to article */
+  scrollbar-width: none; /* hide scrollbar Firefox */
+  -ms-overflow-style: none;  /* hide scrollbar IE 10+ */
+}
+::-webkit-scrollbar {/* hide scrollbar Chrome */
+    display: none;
+    }
+
+/* Header */
+
+body > div:first-child {
+  position: fixed;
+  bottom: 15vh;
+  background: rgba(0,0,0,0.50);
+  color: #fff;
+  width: 100%;
+  text-align: center;  
+  /*font-size: 2vh !important;/*not working?*/
+  padding: .5rem;
+  z-index: 2;
+}
+
+body > div:first-child h1, body > div:first-child h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover interaction */
+
+div + div:hover article {
+  flex: initial;
+  width: 10%;
+}
+
+div + div article:hover {
+    width: 55%;
+    /**/overflow-x: hidden;
+    scrollbar-width: none; /* hide scrollbar Firefox */
+    -ms-overflow-style: none;  /* hide scrollbar IE 10+ */
+}
+
+article > div {
+  opacity: 0;
+  transition: opacity .2s ease 0;
+  /*position: absolute;/**/
+  /*top: 5%;/**/
+  /*margin-top: -30px;/**/
+}
+
+div + div article:hover > div {
+  opacity: 1;
+  transition: opacity .3s ease .3s;
+  /*transition: all 0.3s ease-in-out 0.4s;/**/
+  /*opacity: 1;/**/
+  /*top: 10%;/**/
+}
+
+/* navigation */
+
+div + div article > h2 {
+  bottom: 2vh;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  font-size: 1.7vw;
+}
+
+/* Article layouts */
+
+article div {
+  text-align: left;
+  /*margin-left: 20px;*/
+  /*width: 58vw;*/
+  /**/max-height: calc(72%);
+  /**/overflow-y: auto;
+  /**/overflow-x: hidden;
+  scrollbar-width: none; /* hide scrollbar Firefox */
+  -ms-overflow-style: none;  /* hide scrollbar IE 10+ */
+}
+
+article div > h3 {
+background-color: rgba(0,0,0,0.50);
+padding: .375rem .75rem;
+width: 50vw;
+font-size: 2.5rem;
+text-align: left;
+}
+
+article div > h4 {
+    background-color: rgba(0,0,0,0.50);
+    padding: .375rem .75rem;
+    width: 50vw;
+    font-size: 1.75rem!important;
+    text-align: left!important;
+    }
+
+article div p, article div div h2, article div h3 { margin: 0 0 1em 0; }
+
+/*h1, h2, h3, h4, h5, h6 { text-transform: uppercase; }*/
+
+article div p { width: 40vw; }
+@media (max-width: 1024px) {
+
+div + div article { padding: 2vh 3vw; }
+
+div + div article > h2 {
+  transform: rotate(90deg);
+  bottom: 26vh;
+  min-width: 12em;
+  text-align: left;
+  font-size: 3.5vh;
+  transform: rotate(-90deg);
+  transform-origin: 0 0 0;
+  opacity: 1;
+}
+
+div + div article:hover > h2 { opacity: 0; }
+
+/*article div p { width: 50vw; }*/
+
+article div {
+  max-height: calc(72%);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/**/article div > h3 {
+    width: 45vw;
+    font-size: 1.75rem;
+}
+
+article div > h4 {
+    width: 45vw;
+    font-size: 1.25rem!important;
+    }
+
+body > div:first-child {
+    bottom: 10vh;
+    }
+}
+
+@media (max-width: 356px) {
+
+    div + div article { padding: 2vh 3vw; }
+    
+    div + div article > h2 {
+      transform: rotate(90deg);
+      bottom: 26vh;
+      min-width: 12em;
+      text-align: left;
+      font-size: 3.5vh;
+      transform: rotate(-90deg);
+      transform-origin: 0 0 0;
+      opacity: 1;
+    }
+    
+    div + div article:hover > h2 { opacity: 0; }
+    
+    /*article div p { width: 50vw; }*/
+    
+    article div {
+      max-height: calc(72%);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    /**/article div > h3 {
+        width: 45vw;
+        font-size: 1.75rem;
+    }
+    
+    article div > h4 {
+        width: 45vw;
+        font-size: 1.25rem!important;
+        }
+    
+    body > div:first-child {
+        bottom: 10vh;
+        }
+        .h1, h1 {
+            font-size: 1.75rem;
+        }
+        .h2, h2 {
+            font-size: 1.5rem;
+        }
+    }
